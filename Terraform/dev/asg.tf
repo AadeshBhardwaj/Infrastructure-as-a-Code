@@ -28,6 +28,23 @@ module "asg" {
     Owner = "Aadesh"
   }
 }
+
+# Scaling Policy
+resource "aws_autoscaling_policy" "asg-policy" {
+  count                     = 1
+  name                      = "asg-cpu-policy"
+  autoscaling_group_name    = module.asg.autoscaling_group_name
+  estimated_instance_warmup = 60
+  policy_type               = "TargetTrackingScaling"
+  target_tracking_configuration {
+    predefined_metric_specification {
+      predefined_metric_type = "ASGAverageCPUUtilization"
+    }
+    target_value = 50.0
+  }
+}
+
+#Backend Security Group
 resource "aws_security_group" "node" {
   name   = "ApplicationServer-SG"
   vpc_id = module.vpc.vpc_id
