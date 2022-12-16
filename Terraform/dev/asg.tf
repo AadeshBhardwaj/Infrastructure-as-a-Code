@@ -29,6 +29,7 @@ module "asg" {
   }
 }
 resource "aws_security_group" "node" {
+  name  = "ApplicationServer-SG"
   vpc_id = module.vpc.vpc_id
 
   ingress {
