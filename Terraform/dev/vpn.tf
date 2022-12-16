@@ -1,4 +1,4 @@
-#pritunl ec2 instance
+#Pritunl
 module "pritunl" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
@@ -19,7 +19,7 @@ module "pritunl" {
   }
 }
 
-#security group for pritunl
+#Pritunl Security Group
 resource "aws_security_group" "pritunl-sg" {
   name   = "Pritunl-SG"
   vpc_id = module.vpc.vpc_id

@@ -8,10 +8,7 @@ locals {
   vpc_name             = "Aadesh-VPC"
 }
 
-##################
 # Mongo Instances
-##################
-
 module "ec2_multiple" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
@@ -40,10 +37,8 @@ module "ec2_multiple" {
 
 }
 
-#######################
-# Mongo Security Group
-#######################
 
+# DB Security Group
 resource "aws_security_group" "mongo" {
   name   = "Mongo-DB-SG"
   vpc_id = module.vpc.vpc_id

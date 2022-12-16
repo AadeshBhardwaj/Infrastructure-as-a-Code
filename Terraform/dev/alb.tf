@@ -1,4 +1,4 @@
-#ALB
+#ALB and TG
 module "alb" {
   source  = "terraform-aws-modules/alb/aws"
   version = "8.2.1"
@@ -48,6 +48,7 @@ module "alb" {
   }
 }
 
+#ALB Security Group
 resource "aws_security_group" "alb" {
   name   = "ALB-SG"
   vpc_id = module.vpc.vpc_id
