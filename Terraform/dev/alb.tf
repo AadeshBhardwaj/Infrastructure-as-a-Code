@@ -49,7 +49,7 @@ module "alb" {
 }
 
 resource "aws_security_group" "alb" {
-  name  = "ALB-SG"
+  name   = "ALB-SG"
   vpc_id = module.vpc.vpc_id
 
   ingress {

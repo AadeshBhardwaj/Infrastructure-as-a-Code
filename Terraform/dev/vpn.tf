@@ -21,7 +21,7 @@ module "pritunl" {
 
 #security group for pritunl
 resource "aws_security_group" "pritunl-sg" {
-  name = "Pritunl-SG"
+  name   = "Pritunl-SG"
   vpc_id = module.vpc.vpc_id
 
   ingress {
@@ -52,7 +52,7 @@ resource "aws_security_group" "pritunl-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "Aadesh-Pritunl-SG"
+    Name  = "Aadesh-Pritunl-SG"
     Owner = "Aadesh"
   }
 }

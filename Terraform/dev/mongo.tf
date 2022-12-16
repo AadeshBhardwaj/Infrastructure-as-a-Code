@@ -45,7 +45,7 @@ module "ec2_multiple" {
 #######################
 
 resource "aws_security_group" "mongo" {
-  name  = "Mongo-DB-SG"
+  name   = "Mongo-DB-SG"
   vpc_id = module.vpc.vpc_id
 
   ingress {
