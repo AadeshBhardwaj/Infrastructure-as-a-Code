@@ -15,18 +15,18 @@ sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/Ama
 sudo apt install -y unzip
 sudo unzip -o AmazonCloudWatchAgent.zip
 sudo ./install.sh
-sudo mkdir -p /usr/share/collectd/
-sudo touch /usr/share/collectd/types.db 
+# sudo mkdir -p /usr/share/collectd/
+# sudo touch /usr/share/collectd/types.db 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:AmazonCloudWatch-Aadesh-MERN-Test
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+# sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
 # { 
 # "status": "running", 
 # "starttime": "2020-06-07T10:04:41+00:00", 
 # "version": "1.245315.0" 
 # }
+systemctl start amazon-cloudwatch-agent.service
+systemctl enable amazon-cloudwatch-agent.service
 systemctl status amazon-cloudwatch-agent.service
-
-
 
 #AmazonCodeDeploy Agent
 sudo apt update -y
