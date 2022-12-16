@@ -3,7 +3,7 @@
 This repository contains code for provisioning the AWS Infrastructure and creating the NodeJs Application AMI
 
 # Getting started
-To get the infrastructure running on AWS:
+## To get the infrastructure running on AWS:
 - Clone this repository
 - Change directory to Terraform/dev/
 - Run "terraform init" to install all the required modules from the given source
@@ -11,7 +11,7 @@ To get the infrastructure running on AWS:
 - Run "terraform apply dev" to see the resources to be created, after typing "yes" in console, your AWS Infrastructure will be provisioned
 
 
-# To build AMI for NodeJS Application(BACKEND):
+## To build AMI for NodeJS Application(BACKEND):
 - Change directory into Packer/
 - Run "packer init NodeJS AMI.json" for initializing packer, although it won't get initialized for a JSON File....STILL WE DO IT...FORMALITY!
 - Run "packer validate NodeJS AMI.json" for validating the configuration of this file
