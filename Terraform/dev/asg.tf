@@ -5,7 +5,7 @@ module "asg" {
   # Autoscaling group
   name                      = "Aadesh-NodeJS"
   min_size                  = 1
-  max_size                  = 1
+  max_size                  = 2
   desired_capacity          = 1
   wait_for_capacity_timeout = 0
   health_check_type         = "EC2"
