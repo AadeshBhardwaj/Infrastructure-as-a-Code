@@ -19,9 +19,9 @@ This repository contains code for provisioning the AWS Infrastructure and creati
 
 # Code Overview
 ## Dependencies
-- terraform - To provision AWS Infrastructure
-- packer - To provision the NodeJS Application AMI
-- aws cli v2 - To configure AWS Credentials(Access Key ID, Secret Access Key and Region) of the account in which we are deploying the Web Application
+- [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) - To provision AWS Infrastructure
+- [packer](https://developer.hashicorp.com/packer/downloads) - To provision the NodeJS Application AMI
+- [aws cli v2 for windows](https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html) - To configure AWS Credentials(Access Key ID, Secret Access Key and Region) of the account in which we are deploying the Web Application
 
 ## Application Structure
 - Terraform/ - This folder contains terraform code to create infrastructure for 3-Tier WebApp Deployment in AWS.
