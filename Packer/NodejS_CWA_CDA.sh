@@ -17,6 +17,7 @@ sudo ./install auto
 
 #AmazonCloudWatch Agent
 sudo apt update -y
+sudo apt install collectd -y
 sudo mkdir /tmp/cwa
 cd /tmp/cwa
 sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip -O AmazonCloudWatchAgent.zip
