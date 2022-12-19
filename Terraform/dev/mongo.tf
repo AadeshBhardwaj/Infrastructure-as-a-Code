@@ -9,7 +9,7 @@ locals {
 }
 
 # Mongo Instances
-module "ec2_multiple" {
+module "mongo" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
