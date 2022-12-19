@@ -14,6 +14,9 @@ cd /home/ubuntu
 wget https://aws-codedeploy-ca-central-1.s3.ca-central-1.amazonaws.com/latest/install
 sudo chmod +x ./install
 sudo ./install auto
+sudo systemctl start codedeploy-agent.service
+sudo systemctl enable codedeploy-agent.service
+sudo systemctl status codedeploy-agent.service
 
 #AmazonCloudWatch Agent
 sudo apt update -y
@@ -29,4 +32,6 @@ sudo ./install.sh
 # sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:AmazonCloudWatch-linux-Aadesh
 # /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+systemctl start amazon-cloudwatch-agent.service
+systemctl enable amazon-cloudwatch-agent.service
 systemctl status amazon-cloudwatch-agent.service
