@@ -1,10 +1,7 @@
 locals {
-  instance_type        = "t3a.small"
-  instance_ami         = "ami-0530ca8899fac469f"
-  key_name             = "aadesh"
-  lt_name              = "Aadesh-MERN-LT"
-  iam_instance_profile = "aadesh-CodeDeploy-CloudWatch"
-  vpc_name             = "Aadesh-VPC"
+  instance_type = "t3a.small"
+  instance_ami  = "ami-0530ca8899fac469f"
+  key_name      = "aadesh"
 }
 
 # Mongo Instances

@@ -1,4 +1,6 @@
-# VPC Module
+locals {
+  vpc_name = "Aadesh-VPC"
+} # VPC Module
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
