@@ -1,3 +1,7 @@
+locals {
+  image                = "ami-0b2ddb22095a83a68"
+}
+
 #ASG and LT
 module "asg" {
   source = "terraform-aws-modules/autoscaling/aws"

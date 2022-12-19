@@ -3,7 +3,6 @@ locals {
   instance_ami         = "ami-0530ca8899fac469f"
   key_name             = "aadesh"
   lt_name              = "Aadesh-MERN-LT"
-  image                = "ami-0b44a4c4b894f12f4"
   iam_instance_profile = "aadesh-CodeDeploy-CloudWatch"
   vpc_name             = "Aadesh-VPC"
 }

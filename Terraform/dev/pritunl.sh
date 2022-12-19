@@ -6,5 +6,5 @@ echo "deb http://repo.pritunl.com/stable/apt focal main" | sudo tee /etc/apt/sou
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 apt-get update
 apt-get install mongodb-server pritunl -y
-systemctl start mongodb
-systemctl start pritunl
+systemctl enable mongodb
+systemctl enable pritunl
