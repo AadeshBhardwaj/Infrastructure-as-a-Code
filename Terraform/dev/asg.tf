@@ -23,7 +23,14 @@ module "asg" {
   ebs_optimized               = true
   enable_monitoring           = true
   key_name                    = local.key_name
-  security_groups             = [aws_security_group.node.id]
+  network_interfaces = [
+    {
+      delete_on_termination = true
+      description           = "eth0"
+      device_index          = 0
+      security_groups       = [aws_security_group.node.id]
+    }
+  ]
   tags = {
     Name  = "Aadesh-NodeJS-ASG"
     Owner = "Aadesh"
