@@ -15,7 +15,6 @@ module "pritunl" {
   user_data = file("pritunl.sh")
   tags = {
     Owner = local.owner
-    Environment = "dev"
   }
 }
 
