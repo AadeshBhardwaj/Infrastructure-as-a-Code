@@ -27,6 +27,6 @@ module "vpc" {
   single_nat_gateway = true
 
   tags = {
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }

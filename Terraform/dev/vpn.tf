@@ -14,8 +14,8 @@ module "pritunl" {
 
   user_data = file("pritunl.sh")
   tags = {
-    Terraform   = "true"
-    Environment = "stg"
+    Owner = local.owner
+    Environment = "dev"
   }
 }
 
@@ -56,6 +56,6 @@ resource "aws_security_group" "pritunl-sg" {
   }
   tags = {
     Name  = "Aadesh-Pritunl-SG"
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }

@@ -39,7 +39,7 @@ module "asg" {
   ]
   tags = {
     Name  = "Aadesh-NodeJS-ASG"
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }
 
@@ -86,6 +86,6 @@ resource "aws_security_group" "node" {
 
   tags = {
     Name  = "Aadesh-NodeJS-ApplicationServer-SG"
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }

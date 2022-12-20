@@ -44,7 +44,7 @@ module "alb" {
     }
   ]
   tags = {
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }
 
@@ -76,6 +76,6 @@ resource "aws_security_group" "alb" {
 
   tags = {
     Name  = "Aadesh-ALB-SG"
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }

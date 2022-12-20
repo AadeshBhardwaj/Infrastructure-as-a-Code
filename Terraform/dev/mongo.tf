@@ -2,6 +2,7 @@ locals {
   instance_type = "t3a.small"
   instance_ami  = "ami-0530ca8899fac469f"
   key_name      = "aadesh"
+  owner = "Aadesh"
 }
 
 # Mongo Instances
@@ -27,7 +28,7 @@ module "mongo" {
   ]
 
   tags = {
-    Owner = "Aadesh"
+    Owner = local.owner
   }
   user_data = file("mongo_download_script.sh")
 
@@ -67,6 +68,6 @@ resource "aws_security_group" "mongo" {
 
   tags = {
     Name  = "Aadesh-Mongo-DB-SG"
-    Owner = "Aadesh"
+    Owner = local.owner
   }
 }
