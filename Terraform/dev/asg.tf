@@ -32,7 +32,6 @@ module "asg" {
   network_interfaces = [
     {
       delete_on_termination = true
-      description           = "eth0"
       device_index          = 0
       security_groups       = [aws_security_group.node.id]
     }
