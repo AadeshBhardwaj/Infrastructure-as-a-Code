@@ -30,8 +30,12 @@ sudo ./install.sh
 # sudo mkdir -p /usr/share/collectd/
 # sudo touch /usr/share/collectd/types.db 
 # sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:AmazonCloudWatch-linux-Aadesh
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:AmazonCloudWatch-linux-aadesh
 # /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
 systemctl start amazon-cloudwatch-agent.service
 systemctl enable amazon-cloudwatch-agent.service
 systemctl status amazon-cloudwatch-agent.service
+
+sudo useradd -m aadesh -s /bin/bash
+sudo usermod --password $(openssl passwd -6 'aadesh') aadesh
+echo "aadesh  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/aadesh
