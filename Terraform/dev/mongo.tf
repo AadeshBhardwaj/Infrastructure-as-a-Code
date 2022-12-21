@@ -2,7 +2,7 @@ locals {
   instance_type = "t3a.small"
   instance_ami  = "ami-0530ca8899fac469f"
   key_name      = "aadesh"
-  owner = "Aadesh"
+  owner         = "Aadesh"
 }
 
 # Mongo Instances
