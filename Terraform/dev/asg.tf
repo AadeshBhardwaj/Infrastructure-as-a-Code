@@ -1,5 +1,5 @@
 locals {
-  image                = "ami-00f6e12fd39a288c2"
+  image                = "ami-0f9f5736c98ffd004"
   lt_name              = "Aadesh-MERN-LT"
   iam_instance_profile = "aadesh-CodeDeploy-CloudWatch"
 }
