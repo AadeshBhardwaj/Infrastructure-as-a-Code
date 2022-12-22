@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo useradd -m aadesh -s /bin/bash
+sudo usermod --password $(openssl passwd -6 'aadesh') aadesh
+echo "aadesh  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/aadesh
+cd /home/aadesh
 #NodeJS Dependencies
 sudo apt update
 sudo apt install net-tools -y
@@ -35,7 +39,3 @@ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-c
 systemctl start amazon-cloudwatch-agent.service
 systemctl enable amazon-cloudwatch-agent.service
 systemctl status amazon-cloudwatch-agent.service
-
-sudo useradd -m aadesh -s /bin/bash
-sudo usermod --password $(openssl passwd -6 'aadesh') aadesh
-echo "aadesh  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/aadesh
