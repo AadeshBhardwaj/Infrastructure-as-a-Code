@@ -44,6 +44,7 @@ module "asg" {
 
 # Scaling Policy
 resource "aws_autoscaling_policy" "asg-policy" {
+  
   name                      = "Aadesh-asg-cpu-policy"
   autoscaling_group_name    = module.asg.autoscaling_group_name
   estimated_instance_warmup = 60
