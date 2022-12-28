@@ -14,7 +14,7 @@ sudo npm install pm2@latest -g
 #AmazonCodeDeploy Agent
 sudo apt update -y
 sudo apt install ruby wget -y
-cd /home/ubuntu
+cd /home/aadesh
 wget https://aws-codedeploy-ca-central-1.s3.ca-central-1.amazonaws.com/latest/install
 sudo chmod +x ./install
 sudo ./install auto
